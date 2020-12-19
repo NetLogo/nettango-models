@@ -33,6 +33,8 @@
 
 *  [Particles Sandbox](https://netlogoweb.org/ntango-play-standalone?netTangoModel=https://raw.githubusercontent.com/NetLogo/nt-models/main/Chemistry%20and%20Physics/Particles%20Sandbox.ntjson) [(editable)](https://netlogoweb.org/ntango-build?netTangoModel=https://raw.githubusercontent.com/NetLogo/nt-models/main/Chemistry%20and%20Physics/Particles%20Sandbox.ntjson)
 
+*  [Stop Light](https://netlogoweb.org/ntango-play-standalone?netTangoModel=https://raw.githubusercontent.com/NetLogo/nt-models/main/Chemistry%20and%20Physics/Stop%20Light.ntjson) [(editable)](https://netlogoweb.org/ntango-build?netTangoModel=https://raw.githubusercontent.com/NetLogo/nt-models/main/Chemistry%20and%20Physics/Stop%20Light.ntjson)
+
 *  [Two Particle Sandbox](https://netlogoweb.org/ntango-play-standalone?netTangoModel=https://raw.githubusercontent.com/NetLogo/nt-models/main/Chemistry%20and%20Physics/Two%20Particle%20Sandbox.ntjson) [(editable)](https://netlogoweb.org/ntango-build?netTangoModel=https://raw.githubusercontent.com/NetLogo/nt-models/main/Chemistry%20and%20Physics/Two%20Particle%20Sandbox.ntjson)
 
 ## Theory Building
