@@ -11,9 +11,8 @@ In the library directory, the default link is to the Playable version with a sep
 
 ## Hot-Linking Models
 The easiest way to access or link to one of these models is to "hot-link" the hosted NetTango JSON files hosted here using the current live version of NetTango.
-
-- To share for editing, use `https://netlogoweb.org/ntango-build?netTangoModel=$LINK_TO_YOUR_MODEL`
-- To share in play mode without editing features, use `https://netlogoweb.org/ntango-play-standalone?netTangoModel=$LINK_TO_YOUR_MODEL`.
+- To share for editing, use `https://netlogoweb.org/nettango-builder?netTangoModel=$LINK_TO_YOUR_MODEL`
+- To share in play mode without editing features, use `https://netlogoweb.org/nettango-player?playMode=true&netTangoModel=$LINK_TO_YOUR_MODEL`.
 
 For examples of these, check out our [current library directory](https://github.com/NetLogo/nt-models/blob/main/LIBRARY.md).
 

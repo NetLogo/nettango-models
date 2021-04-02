@@ -16,11 +16,11 @@ for item in theLibrary:
 
 folders = sorted(folders, key=str.lower)
 
-NTANGO_PLAYER = "https://netlogoweb.org/ntango-play-standalone?netTangoModel="
-NTANGO_EDITOR = "https://netlogoweb.org/ntango-build?netTangoModel="
+NTANGO_PLAYER = "https://netlogoweb.org/nettango-player?playMode=true&netTangoModel="
+NTANGO_EDITOR = "https://netlogoweb.org/nettango-builder?netTangoModel="
 GITHUB_REPO   = "https://raw.githubusercontent.com/NetLogo/nt-models/main/"
 
-f = open(os.path.dirname(__file__) + "../LIBRARY.md", "w")
+f = open(os.path.dirname(__file__) + "/../LIBRARY.md", "w")
 libraryDict = []
 f.write("# Preliminary NetTango Models Library Directory\n\n")
 for folder in folders:
@@ -34,6 +34,6 @@ for folder in folders:
             libraryDict.append({ 'name':model['name'], 'url':NTANGO_PLAYER + GITHUB_REPO + model['path'] })
 f.close()
 
-with open(os.path.dirname(__file__) + "../library.json", "w") as outfile:
+with open(os.path.dirname(__file__) + "/../library.json", "w") as outfile:
     libraryDict = {'success':True, 'models':libraryDict}
     json.dump(libraryDict, outfile)
