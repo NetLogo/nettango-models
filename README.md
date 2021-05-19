@@ -21,5 +21,8 @@ Users should think of this as a centralized repository for NetTango models devel
 
 Future additions to this repository will include a NetTango model Style Guide, automated testing suites, and a more fully featured browser and directory structure.
 
+## Usage
+To re-generate the models `LIBRARY.md` and `library.json` files run `python ./src/LibraryGenerator.py`.  You'll need some version of Python installed, preferrably Python 3.
+
 ## Questions?
 Send us an email at [czars@ccl.northwestern.edu](mailto:czars@ccl.northwestern.edu).
