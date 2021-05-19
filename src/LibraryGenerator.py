@@ -21,20 +21,27 @@ folders = sorted(folders, key = str.lower)
 NTANGO_PLAYER = "https://netlogoweb.org/nettango-player?playMode=true&netTangoModel="
 NTANGO_EDITOR = "https://netlogoweb.org/nettango-builder?netTangoModel="
 GITHUB_REPO   = "https://raw.githubusercontent.com/NetLogo/nt-models/main/"
+TEST_PLAYER   = "https://staging.netlogoweb.org/nettango-player?playMode=true&netTangoModel="
+TEST_EDITOR   = "https://staging.netlogoweb.org/nettango-builder?netTangoModel="
 
-f = open(os.getcwd() + "/LIBRARY.md", "w")
-libraryDict = []
-f.write("# Preliminary NetTango Models Library Directory\n\n")
-for folder in folders:
-    f.write("## " + folder + "\n")
-    for model in sorted(theLibrary, key = lambda i: i['name']):
-        if folder == model['folder']:
-            f.write("""*  [{name}]({playLink}) [(editable)]({editLink})\n\n""".format(name=model['name'],
-                                                                  playLink=(NTANGO_PLAYER + GITHUB_REPO + model['path']),
-                                                                  editLink=(NTANGO_EDITOR + GITHUB_REPO + model['path'])
-                                                                 ))
-            libraryDict.append({ 'name': model['name'], 'path': model['path'], 'url': NTANGO_PLAYER + GITHUB_REPO + model['path'] })
-f.close()
+def generatePage(file, playerLink, editorLink):
+    f = open(os.getcwd() + "/" + file, "w")
+    libraryDict = []
+    f.write("# Preliminary NetTango Models Library Directory\n\n")
+    for folder in folders:
+        f.write("## " + folder + "\n")
+        for model in sorted(theLibrary, key = lambda i: i['name']):
+            if folder == model['folder']:
+                f.write("""*  [{name}]({playLink}) [(editable)]({editLink})\n\n""".format(name=model['name'],
+                                                                    playLink=(playerLink + GITHUB_REPO + model['path']),
+                                                                    editLink=(editorLink + GITHUB_REPO + model['path'])
+                                                                    ))
+                libraryDict.append({ 'name': model['name'], 'path': model['path'], 'url': playerLink + GITHUB_REPO + model['path'] })
+    f.close()
+    return libraryDict
+
+libraryDict = generatePage("LIBRARY.md", NTANGO_PLAYER, NTANGO_EDITOR)
+generatePage("test/TESTING.md", TEST_PLAYER, TEST_EDITOR)
 
 with open(os.getcwd() + "/library.json", "w") as outfile:
     libraryDict = { 'success': True, 'models': libraryDict }
