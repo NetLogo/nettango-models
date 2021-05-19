@@ -31,9 +31,9 @@ for folder in folders:
                                                                   playLink=(NTANGO_PLAYER + GITHUB_REPO + model['path']),
                                                                   editLink=(NTANGO_EDITOR + GITHUB_REPO + model['path'])
                                                                  ))
-            libraryDict.append({ 'name':model['name'], 'url':NTANGO_PLAYER + GITHUB_REPO + model['path'] })
+            libraryDict.append({ 'name': model['name'], 'path': model['path'], 'url': NTANGO_PLAYER + GITHUB_REPO + model['path'] })
 f.close()
 
 with open(os.path.dirname(__file__) + "/../library.json", "w") as outfile:
-    libraryDict = {'success':True, 'models':libraryDict}
+    libraryDict = { 'success': True, 'models': libraryDict }
     json.dump(libraryDict, outfile)
