@@ -36,7 +36,12 @@ def generatePage(file, playerLink, editorLink):
                                                                     playLink=(playerLink + GITHUB_REPO + model['path']),
                                                                     editLink=(editorLink + GITHUB_REPO + model['path'])
                                                                     ))
-                libraryDict.append({ 'name': model['name'], 'path': model['path'], 'url': playerLink + GITHUB_REPO + model['path'] })
+                libraryDict.append({
+                    'name': model['name'],
+                    'folder': model['folder'],
+                    'path': model['path'],
+                    'url': playerLink + GITHUB_REPO + model['path']
+                })
     f.close()
     return libraryDict
 
