@@ -38,7 +38,11 @@
 *  [Two Particle Sandbox](https://netlogoweb.org/nettango-player?playMode=true&netTangoModel=https://raw.githubusercontent.com/NetLogo/nt-models/main/Chemistry%20and%20Physics/Two%20Particle%20Sandbox.ntjson) [(editable)](https://netlogoweb.org/nettango-builder?netTangoModel=https://raw.githubusercontent.com/NetLogo/nt-models/main/Chemistry%20and%20Physics/Two%20Particle%20Sandbox.ntjson)
 
 ## Theory Building
+*  [Diffusion Graphics](https://netlogoweb.org/nettango-player?playMode=true&netTangoModel=https://raw.githubusercontent.com/NetLogo/nt-models/main/Theory%20Building/Diffusion%20Graphics.ntjson) [(editable)](https://netlogoweb.org/nettango-builder?netTangoModel=https://raw.githubusercontent.com/NetLogo/nt-models/main/Theory%20Building/Diffusion%20Graphics.ntjson)
+
 *  [Disease](https://netlogoweb.org/nettango-player?playMode=true&netTangoModel=https://raw.githubusercontent.com/NetLogo/nt-models/main/Theory%20Building/Disease.ntjson) [(editable)](https://netlogoweb.org/nettango-builder?netTangoModel=https://raw.githubusercontent.com/NetLogo/nt-models/main/Theory%20Building/Disease.ntjson)
+
+*  [Fire](https://netlogoweb.org/nettango-player?playMode=true&netTangoModel=https://raw.githubusercontent.com/NetLogo/nt-models/main/Theory%20Building/Fire.ntjson) [(editable)](https://netlogoweb.org/nettango-builder?netTangoModel=https://raw.githubusercontent.com/NetLogo/nt-models/main/Theory%20Building/Fire.ntjson)
 
 *  [Salt Lake City Earthquakes](https://netlogoweb.org/nettango-player?playMode=true&netTangoModel=https://raw.githubusercontent.com/NetLogo/nt-models/main/Theory%20Building/Salt%20Lake%20City%20Earthquakes.ntjson) [(editable)](https://netlogoweb.org/nettango-builder?netTangoModel=https://raw.githubusercontent.com/NetLogo/nt-models/main/Theory%20Building/Salt%20Lake%20City%20Earthquakes.ntjson)
 
