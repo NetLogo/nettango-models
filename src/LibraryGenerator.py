@@ -20,7 +20,7 @@ folders = sorted(folders, key = str.lower)
 
 NTANGO_PLAYER = "https://netlogoweb.org/nettango-player?playMode=true&netTangoModel="
 NTANGO_EDITOR = "https://netlogoweb.org/nettango-builder?netTangoModel="
-GITHUB_REPO   = "https://raw.githubusercontent.com/NetLogo/nt-models/main/"
+GITHUB_REPO   = "https://raw.githubusercontent.com/NetLogo/nettango-models/main/"
 TEST_PLAYER   = "https://staging.netlogoweb.org/nettango-player?playMode=true&netTangoModel="
 TEST_EDITOR   = "https://staging.netlogoweb.org/nettango-builder?netTangoModel="
 

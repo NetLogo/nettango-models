@@ -1,5 +1,5 @@
 # NetTango Models (Preliminary) Library
-A preliminary version of a "Models Library" for NetTango models. To browse the library, please [visit our current library directory](https://github.com/NetLogo/nt-models/blob/main/LIBRARY.md).
+A preliminary version of a "Models Library" for NetTango models. To browse the library, please [visit our current library directory](https://github.com/NetLogo/nettango-models/blob/main/LIBRARY.md).
 
 NetTango is a tool that allows you to build blocks-based programming environments for [NetLogo](https://www.github.com/NetLogo/NetLogo) models. For more information on building your own NetTango models, visit the [documentation for the NetTango Builder](https://github.com/NetLogo/Galapagos/wiki/NetTango-Builder).
 
@@ -14,7 +14,7 @@ The easiest way to access or link to one of these models is to "hot-link" the ho
 - To share for editing, use `https://netlogoweb.org/nettango-builder?netTangoModel=$LINK_TO_YOUR_MODEL`
 - To share in play mode without editing features, use `https://netlogoweb.org/nettango-player?playMode=true&netTangoModel=$LINK_TO_YOUR_MODEL`.
 
-For examples of these, check out our [current library directory](https://github.com/NetLogo/nt-models/blob/main/LIBRARY.md).
+For examples of these, check out our [current library directory](https://github.com/NetLogo/nettango-models/blob/main/LIBRARY.md).
 
 ## Important Note
 Users should think of this as a centralized repository for NetTango models developed by the CCL and *NOT* as a formal Models Library like [NetLogo/models](https://www.github.com/NetLogo/NetLogo). NetTango is under active development right now and many things are subject to change, including the details here. We are not currently accepting submissions for inclusion into this particular library.
