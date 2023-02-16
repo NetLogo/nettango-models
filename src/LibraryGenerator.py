@@ -7,7 +7,12 @@ theLibrary = []
 for root, dirs, files in os.walk(".", topdown = False):
     for name in files:
         if name[-7:] == ".ntjson":
-            theModel = { "name": name[:-7], "folder": root[2:], "path": os.path.join(root, name)[2:].replace(" ", "%20") }
+            relativePath = os.path.join(root, name)[2:].replace(" ", "%20")
+            theModel = {
+                "name": name[:-7]
+            ,   "folder": root[2:]
+            ,   "path": relativePath
+            }
             theLibrary.append(theModel)
 
 folders = []
@@ -28,20 +33,25 @@ def generatePage(file, playerLink, editorLink):
     f = open(os.getcwd() + "/" + file, "w")
     libraryDict = []
     f.write("# Preliminary NetTango Models Library Directory\n\n")
+
     for folder in folders:
         f.write("## " + folder + "\n")
+
         for model in sorted(theLibrary, key = lambda i: i['name']):
             if folder == model['folder']:
-                f.write("""*  [{name}]({playLink}) [(editable)]({editLink})\n\n""".format(name=model['name'],
-                                                                    playLink=(playerLink + GITHUB_REPO + model['path']),
-                                                                    editLink=(editorLink + GITHUB_REPO + model['path'])
-                                                                    ))
+                playLink = (playerLink + GITHUB_REPO + model['path'])
+                editLink = (editorLink + GITHUB_REPO + model['path'])
+                lineTemplate = """*  [{name}]({playLink}) [(editable)]({editLink})\n\n"""
+                modelLine = lineTemplate.format(name=model['name'], playLink = playLink, editLink = editLink)
+                f.write(modelLine)
+
                 libraryDict.append({
-                    'name': model['name'],
-                    'folder': model['folder'],
-                    'path': model['path'],
-                    'url': playerLink + GITHUB_REPO + model['path']
+                    'name': model['name']
+                ,   'folder': model['folder']
+                ,   'path': model['path']
+                ,   'url': playerLink + GITHUB_REPO + model['path']
                 })
+
     f.close()
     return libraryDict
 
