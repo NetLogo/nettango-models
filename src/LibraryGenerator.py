@@ -53,10 +53,11 @@ folders = sorted(folders, key = str.lower)
 NTANGO_PLAYER = "https://netlogoweb.org/nettango-player?playMode=true&netTangoModel="
 NTANGO_EDITOR = "https://netlogoweb.org/nettango-builder?netTangoModel="
 GITHUB_REPO   = "https://raw.githubusercontent.com/NetLogo/nettango-models/main/"
+PROD_REPO     = "https://netlogoweb.org/assets/nt-modelslib/"
 TEST_PLAYER   = "https://staging.netlogoweb.org/nettango-player?playMode=true&netTangoModel="
 TEST_EDITOR   = "https://staging.netlogoweb.org/nettango-builder?netTangoModel="
 
-def generatePage(file, playerLink, editorLink):
+def generatePage(file, modelRepo, playerLink, editorLink):
     f = open(os.getcwd() + "/" + file, "w")
     libraryDict = []
     f.write("# Preliminary NetTango Models Library Directory\n\n")
@@ -66,8 +67,8 @@ def generatePage(file, playerLink, editorLink):
 
         for model in sorted(theLibrary, key = lambda i: i['name']):
             if folder == model['folder']:
-                playLink = (playerLink + GITHUB_REPO + model['path'])
-                editLink = (editorLink + GITHUB_REPO + model['path'])
+                playLink = (playerLink + modelRepo + model['path'])
+                editLink = (editorLink + modelRepo + model['path'])
                 lineTemplate = """### [{name}]({playLink}) [(editable)]({editLink})\n\n"""
                 modelLine = lineTemplate.format(name=model['name'], playLink = playLink, editLink = editLink)
                 f.write(modelLine)
@@ -81,15 +82,15 @@ def generatePage(file, playerLink, editorLink):
                     'name': model['name']
                 ,   'folder': model['folder']
                 ,   'path': model['path']
-                ,   'url': playerLink + GITHUB_REPO + model['path']
+                ,   'url': playerLink + modelRepo + model['path']
                 ,   'info': model['info']
                 })
 
     f.close()
     return libraryDict
 
-libraryDict = generatePage("LIBRARY.md", NTANGO_PLAYER, NTANGO_EDITOR)
-generatePage("test/TESTING.md", TEST_PLAYER, TEST_EDITOR)
+libraryDict = generatePage("LIBRARY.md", PROD_REPO, NTANGO_PLAYER, NTANGO_EDITOR)
+generatePage("test/TESTING.md", GITHUB_REPO, TEST_PLAYER, TEST_EDITOR)
 
 with open(os.getcwd() + "/library.json", "w") as outfile:
     libraryDict = { 'success': True, 'models': libraryDict }
